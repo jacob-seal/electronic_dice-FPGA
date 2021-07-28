@@ -1,5 +1,6 @@
 # electronic_dice-FPGA
 Instantiatable electronic dice that returns a psuedo-random integer between 1 and 6. Can be easily inserted into any dice based game. 
+The randomness is inserted by the human who presses the button at random times. 
 
 Fully simulated with testbench on eda playground at:
 
