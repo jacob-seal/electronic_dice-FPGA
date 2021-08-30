@@ -60,7 +60,7 @@ architecture Behavioral of dice is
 	signal r_counter : integer range 1 to 6 := 1;
 
 	--counter for clock divider
-	signal r_clk_counter : integer range 0 to clk_divider := 0;
+	signal r_clk_counter : integer range 0 to clk_divider + 1 := 0;
 
 	
 	--signal used to register the random number for the output o_rand
@@ -90,7 +90,7 @@ begin
        
 
 	--captures the value of the counter when the button is pressed
-	create_rand : process(i_Clk)
+	create_rand : process(i_Clk, r_rand_temp)
 		
 	begin
 		if rising_edge(i_Clk) then
